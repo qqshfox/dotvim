@@ -6,7 +6,7 @@
 
 ```bash
 mkdir -p ~/.config
-git clone https://github.com/qqshfox/dotvim.git ~/.config/vim
+git clone https://github.com/qqshfox/dotvim.git ~/.config/nvim
 nvim -c 'PlugInstall'
 ```
 
