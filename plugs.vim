@@ -57,6 +57,7 @@ end
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'leafgarland/typescript-vim' | Plug 'peitalin/vim-jsx-typescript'
+Plug 'cespare/vim-toml'
 
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'ciaranm/inkpot'
