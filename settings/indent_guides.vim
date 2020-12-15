@@ -1,8 +1,4 @@
-if get(g:, 'colors_name', 'unknown') == 'inkpot' && !has("gui_running")
-  let g:indent_guides_auto_colors = 0
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=233
-elseif get(g:, 'colors_name', 'unknown') == 'solarized'
+if get(g:, 'colors_name', 'unknown') == 'solarized' && !has("gui_running")
   let g:indent_guides_auto_colors = 0
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
 else

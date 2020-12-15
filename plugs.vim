@@ -60,7 +60,6 @@ Plug 'leafgarland/typescript-vim' | Plug 'peitalin/vim-jsx-typescript'
 Plug 'cespare/vim-toml'
 
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'ciaranm/inkpot'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'ajh17/Spacegray.vim'
