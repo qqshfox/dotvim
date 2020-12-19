@@ -1,0 +1,7 @@
+{
+  "clangd.path": "/Library/Developer/CommandLineTools/usr/bin/clangd",
+  "snippets.ultisnips.directories": [
+    "Ultisnips",
+    "gosnippets/UltiSnips"
+  ]
+}
