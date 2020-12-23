@@ -43,7 +43,6 @@ nnoremap <F1> <NOP>
 vnoremap <F1> <NOP>
 
 " Save
-nnoremap <silent> <leader>ws :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <silent> <leader>w :w<CR>
 command! W exec 'w !sudo tee % > /dev/null' | e!
 
