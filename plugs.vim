@@ -26,6 +26,7 @@ Plug 'yssl/QFEnter'
 Plug 'wellle/targets.vim'
 Plug 'szw/vim-maximizer'
 Plug 'bogado/file-line'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'LucHermitte/lh-vim-lib' | Plug 'LucHermitte/local_vimrc'
 if has('unix')
   let s:uname = system('uname -s')
