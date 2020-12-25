@@ -27,5 +27,5 @@ endif
 
 let mapleader = ','
 
-exe 'source' g:editor_root . '/settings.vim'
 exe 'source' g:editor_root . '/keymap.vim'
+exe 'source' g:editor_root . '/settings.vim'

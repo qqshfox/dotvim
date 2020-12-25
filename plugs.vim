@@ -13,7 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-endwise'
 Plug 'terryma/vim-multiple-cursors'
@@ -26,6 +26,7 @@ Plug 'wellle/targets.vim'
 Plug 'szw/vim-maximizer'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'LucHermitte/lh-vim-lib' | Plug 'LucHermitte/local_vimrc'
+Plug 'kristijanhusak/vim-dadbod' | Plug 'kristijanhusak/vim-dadbod-ui'
 if has('unix')
   let s:uname = system('uname -s')
   if s:uname =~ 'Darwin'
@@ -36,23 +37,8 @@ if has("nvim")
   Plug 'kassio/neoterm'
 end
 
-if has("nvim") || v:version >= 800
-  Plug 'dense-analysis/ale'
-else
-  Plug 'vim-syntastic/syntastic'
-endif
-if has("nvim")
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  \ | Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
-  \ | Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-  \ | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': 'javascript' }
-  \ | Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
-  Plug 'Rip-Rip/clang_complete', { 'do': 'nvim -c \"r! git ls-files autoload bin doc plugin\" -c \"$$,$$d _\" -c \"%MkVimball! $@ .\" -c \"q!\" && nvim &< -c \"so %\" -c \"q\"' }
-else
-  Plug 'Valloric/YouCompleteMe'
-  \ | Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-  Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-end
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'leafgarland/typescript-vim' | Plug 'peitalin/vim-jsx-typescript'
