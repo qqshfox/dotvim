@@ -27,6 +27,7 @@ Plug 'szw/vim-maximizer'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'LucHermitte/lh-vim-lib' | Plug 'LucHermitte/local_vimrc'
 Plug 'kristijanhusak/vim-dadbod' | Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'dhruvasagar/vim-table-mode'
 if has('unix')
   let s:uname = system('uname -s')
   if s:uname =~ 'Darwin'
