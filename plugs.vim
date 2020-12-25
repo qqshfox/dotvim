@@ -24,7 +24,6 @@ Plug 'luochen1990/rainbow'
 Plug 'yssl/QFEnter'
 Plug 'wellle/targets.vim'
 Plug 'szw/vim-maximizer'
-Plug 'bogado/file-line'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'LucHermitte/lh-vim-lib' | Plug 'LucHermitte/local_vimrc'
 Plug 'kristijanhusak/vim-dadbod' | Plug 'kristijanhusak/vim-dadbod-ui'
@@ -44,6 +43,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'leafgarland/typescript-vim' | Plug 'peitalin/vim-jsx-typescript'
 Plug 'cespare/vim-toml'
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
