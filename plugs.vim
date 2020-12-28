@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'henrik/vim-indexed-search'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'Raimondi/delimitMate'
 Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-surround'
