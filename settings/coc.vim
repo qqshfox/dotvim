@@ -1,7 +1,9 @@
 let g:coc_global_extensions = [
       \ 'coc-clangd',
+      \ 'coc-css',
       \ 'coc-db',
       \ 'coc-go',
+      \ 'coc-html',
       \ 'coc-json',
       \ 'coc-marketplace',
       \ 'coc-pyright',
