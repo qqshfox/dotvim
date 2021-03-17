@@ -46,6 +46,7 @@ Plug 'leafgarland/typescript-vim' | Plug 'peitalin/vim-jsx-typescript'
 Plug 'cespare/vim-toml'
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'LnL7/vim-nix'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
