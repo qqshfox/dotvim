@@ -27,7 +27,6 @@ Plug 'yssl/QFEnter'
 Plug 'wellle/targets.vim'
 Plug 'szw/vim-maximizer'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'LucHermitte/lh-vim-lib' | Plug 'LucHermitte/local_vimrc'
 Plug 'kristijanhusak/vim-dadbod' | Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'dhruvasagar/vim-table-mode'
 if has('unix')
