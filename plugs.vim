@@ -9,7 +9,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'henrik/vim-indexed-search'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'Raimondi/delimitMate'
 Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
