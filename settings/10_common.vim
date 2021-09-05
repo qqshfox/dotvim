@@ -25,3 +25,5 @@ autocmd BufReadPost *
 " Exit vim if last buffer is closed which is not buftype=nofile or buftype=quickfix
 " https://superuser.com/a/634193
 "au QuitPre * exe "lclose|cclose" " cclose caused crash
+
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,__pycache__
