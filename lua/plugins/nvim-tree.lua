@@ -33,11 +33,13 @@ return function()
 
   setup {
     icons = { default = '' },
-    gitignore = true,
   }
 
   require'nvim-tree'.setup {
     auto_close = true,
+    git = {
+      ignore = true,
+    },
     hide_dotfiles = true,
     hijack_cursor = false,
     open_on_tab = true,
