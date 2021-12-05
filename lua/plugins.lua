@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'kabouzeid/nvim-lspinstall',
+    'williamboman/nvim-lsp-installer',
     requires = {
       'neovim/nvim-lspconfig',
       'qqshfox/lspsaga.nvim',
@@ -107,7 +107,10 @@ return require('packer').startup(function(use)
     config = require 'plugins/nvim-cmp'
   }
 
-  use 'ray-x/lsp_signature.nvim'
+  use {
+    'ray-x/lsp_signature.nvim',
+    config = function() require('lsp_signature').setup() end
+  }
 
   use 'mhinz/vim-startify'
 
