@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
     'kabouzeid/nvim-lspinstall',
     requires = {
       'neovim/nvim-lspconfig',
-      'glepnir/lspsaga.nvim',
+      'qqshfox/lspsaga.nvim',
     },
     config = require 'plugins/lsp'
   }
