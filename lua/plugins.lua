@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'shadmansaleh/lualine.nvim',
+    'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = function()
       require('lualine').setup {
@@ -165,13 +165,17 @@ return require('packer').startup(function(use)
 
   use {
     'windwp/nvim-autopairs',
-    requires = 'nvim-treesitter/nvim-treesitter',
+    requires = {
+      'nvim-treesitter/nvim-treesitter',
+      'hrsh7th/nvim-cmp',
+    },
     config = function()
       require('nvim-autopairs').setup { check_ts = true }
-      require('nvim-autopairs.completion.cmp').setup({
-        map_cr = true,
-        map_complete = true,
-      })
+
+      local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+      local cmp = require('cmp')
+      cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
+
       require'nvim-treesitter.configs'.setup {
         autopairs = { enable = true },
       }
