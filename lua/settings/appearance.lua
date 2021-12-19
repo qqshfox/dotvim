@@ -20,10 +20,8 @@ opt.listchars.precedes = '❮'
 opt.laststatus = 2
 
 opt.cursorline = true
-vim.api.nvim_command([[
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-]])
+vim.api.nvim_command([[autocmd WinEnter * setlocal cursorline]])
+vim.api.nvim_command([[autocmd WinLeave * setlocal nocursorline]])
 
 opt.textwidth = 110
 opt.colorcolumn = '+1,+41'
