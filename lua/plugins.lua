@@ -230,4 +230,17 @@ return require('packer').startup(function(use)
       })
     end,
   }
+
+  use {
+    'scalameta/nvim-metals',
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      vim.opt_global.shortmess:remove("F")
+
+      vim.cmd [[augroup lsp]]
+      vim.cmd [[au!]]
+      vim.cmd [[au FileType scala,sbt lua require("metals").initialize_or_attach({})]]
+      vim.cmd [[augroup end]]
+    end,
+  }
 end)
