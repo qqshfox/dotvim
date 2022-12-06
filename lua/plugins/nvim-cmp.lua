@@ -64,9 +64,6 @@ return function()
         's',
       }),
     },
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
     sources = {
       { name = 'nvim_lsp' },
       { name = 'buffer' },

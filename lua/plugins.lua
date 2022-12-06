@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
     run = ':TSUpdate',
     config = function()
       require'nvim-treesitter.configs'.setup {
-        ensure_installed = 'maintained',
+        ensure_installed = { "lua", "vim", "help" },
         highlight = { enable = true },
       }
     end
@@ -195,7 +195,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'blackCauldron7/surround.nvim',
+    'ur4ltz/surround.nvim',
     config = function()
       require'surround'.setup { mappings_style = 'surround' }
     end
