@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
     run = ':TSUpdate',
     config = function()
       require'nvim-treesitter.configs'.setup {
-        ensure_installed = { "lua", "vim", "help" },
+        ensure_installed = { "lua", "vim", "vimdoc" },
         highlight = { enable = true },
       }
     end
@@ -60,30 +60,22 @@ return require('packer').startup(function(use)
     'williamboman/nvim-lsp-installer',
     requires = {
       'neovim/nvim-lspconfig',
-      'qqshfox/lspsaga.nvim',
+      'nvimdev/lspsaga.nvim',
     },
     config = require 'plugins/lsp'
   }
 
   use {
-    'qqshfox/lspsaga.nvim',
-    branch = 'tabnew',
-    requires = 'neovim/nvim-lspconfig',
+    'nvimdev/lspsaga.nvim',
+    opt = true,
+    event = "LspAttach",
+    requires = {
+        {"nvim-tree/nvim-web-devicons"},
+        --Please make sure you install markdown and markdown_inline parser
+        {"nvim-treesitter/nvim-treesitter"}
+    },
     config = function()
-      vim.opt.hidden = true
-
-      require 'lspsaga'.init_lsp_saga {
-        finder_action_keys = {
-          open = '<CR>',
-          quit = '<ESC>',
-        },
-        code_action_keys = {
-          quit = '<ESC>',
-        },
-        rename_action_keys = {
-          quit = '<ESC>',
-        },
-      }
+      require("lspsaga").setup({})
     end
   }
 
