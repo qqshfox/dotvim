@@ -1,17 +1,21 @@
 ---@diagnostic disable: undefined-global
 return function()
-  local lsp_installer = require("nvim-lsp-installer")
+  require("mason").setup()
+  require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls", "pyright" },
+  }
 
-  lsp_installer.on_server_ready(function(server)
-    local opts = {}
-
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
-
-    -- This setup() function is exactly the same as lspconfig's setup function.
-    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    server:setup(opts)
-  end)
+  require("mason-lspconfig").setup_handlers {
+    -- The first entry (without a key) will be the default handler
+    -- and will be called for each installed server that doesn't have
+    -- a dedicated handler.
+    function (server_name) -- default handler (optional)
+        require("lspconfig")[server_name].setup {}
+    end,
+    -- Next, you can provide a dedicated handler for specific servers.
+    -- For example, a handler override for the `rust_analyzer`:
+    --["rust_analyzer"] = function ()
+    --    require("rust-tools").setup {}
+    --end
+  }
 end

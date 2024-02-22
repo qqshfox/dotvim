@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
     run = ':TSUpdate',
     config = function()
       require'nvim-treesitter.configs'.setup {
-        ensure_installed = { "lua", "vim", "vimdoc" },
+        ensure_installed = { "lua", "vim", "vimdoc", "help", "java", "python" },
         highlight = { enable = true },
       }
     end
@@ -57,8 +57,9 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'williamboman/nvim-lsp-installer',
+    'williamboman/mason.nvim',
     requires = {
+      'williamboman/mason-lspconfig.nvim',
       'neovim/nvim-lspconfig',
       'nvimdev/lspsaga.nvim',
     },
@@ -67,12 +68,11 @@ return require('packer').startup(function(use)
 
   use {
     'nvimdev/lspsaga.nvim',
-    opt = true,
-    event = "LspAttach",
     requires = {
+        {'neovim/nvim-lspconfig'},
         {"nvim-tree/nvim-web-devicons"},
         --Please make sure you install markdown and markdown_inline parser
-        {"nvim-treesitter/nvim-treesitter"}
+        {"nvim-treesitter/nvim-treesitter"},
     },
     config = function()
       require("lspsaga").setup({})
@@ -118,12 +118,15 @@ return require('packer').startup(function(use)
     'lukas-reineke/indent-blankline.nvim',
     requires = 'nvim-treesitter/nvim-treesitter',
     config = function()
-      require('indent_blankline').setup {
-        bufname_exclude = {'startify', 'NvimTree'},
-        buftype_exclude = {'help', 'terminal'},
-        context_patterns = {'class', 'function', 'method', '^if', 'for', 'while', 'try', 'with'},
-        show_current_context = true,
-        use_treesitter = true,
+      require('ibl').setup {
+        exclude = {
+          filetypes = {
+            'help',
+            'terminal',
+            'startify',
+            'NvimTree',
+          },
+        }
       }
     end
   }
@@ -203,11 +206,8 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'beauwilliams/focus.nvim',
-    config = function()
-      require("focus").setup()
-      vim.api.nvim_set_keymap('n', '<leader>F', '<cmd>FocusToggle<CR>', { silent = true, noremap = true })
-    end
+    'nvim-focus/focus.nvim',
+    config = require 'plugins/focus'
   }
 
   use { 'rust-lang/rust.vim', ft = 'rust' }

@@ -2,9 +2,19 @@
 return function()
   vim.opt.termguicolors = true
 
-  local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
 
-  require'nvim-tree'.setup {
+  local function on_attach(bufnr)
+    local api = require "nvim-tree.api"
+
+    api.config.mappings.default_on_attach(bufnr)
+  end
+
+  require("nvim-tree").setup {
+    on_attach = on_attach,
+
     git = {
       ignore = true,
     },
@@ -15,6 +25,6 @@ return function()
     },
   }
 
-  vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('n', '<leader>fn', '<cmd>NvimTreeFindFile<CR>', { noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>n',  '<cmd>NvimTreeToggle<CR>',   opts('Toggle'))
+  vim.keymap.set('n', '<leader>fn', '<cmd>NvimTreeFindFile<CR>', opts('Find'))
 end
