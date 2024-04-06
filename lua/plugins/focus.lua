@@ -1,7 +1,7 @@
 return function()
   vim.api.nvim_set_keymap('n', '<leader>F', '<cmd>FocusToggle<CR>', { silent = true, noremap = true })
 
-  local ignore_filetypes = { 'NvimTree' }
+  local ignore_filetypes = { 'NvimTree', 'fugitiveblame' }
   local ignore_buftypes = { 'nofile', 'prompt', 'popup' }
 
   local augroup = vim.api.nvim_create_augroup('FocusDisable', { clear = true })
