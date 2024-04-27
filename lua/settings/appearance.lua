@@ -27,3 +27,5 @@ opt.textwidth = 110
 opt.colorcolumn = '+1,+41'
 
 opt.completeopt:remove 'preview'
+
+opt.signcolumn = 'yes:1'

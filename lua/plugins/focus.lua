@@ -31,5 +31,9 @@ return function()
     desc = 'Disable focus autoresize for FileType',
   })
 
-  require("focus").setup()
+  require("focus").setup({
+    ui = {
+      signcolumn = false
+    }
+  })
 end
