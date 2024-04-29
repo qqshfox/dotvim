@@ -1,9 +1,14 @@
-return function()
-  local opts = { noremap = true, silent = true }
-
-  vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
-  vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
-  vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
-  vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
-  vim.api.nvim_set_keymap('n', '<leader>fc', '<cmd>Telescope commands<cr>', opts)
-end
+return {
+  'nvim-telescope/telescope.nvim',
+  event = 'VeryLazy',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+  },
+  keys = {
+    { '<leader>ff', '<cmd>Telescope find_files<cr>' },
+    { '<leader>fg', '<cmd>Telescope live_grep<cr>' },
+    { '<leader>fb', '<cmd>Telescope buffers<cr>' },
+    { '<leader>fh', '<cmd>Telescope help_tags<cr>' },
+    { '<leader>fc', '<cmd>Telescope commands<cr>' },
+  },
+}

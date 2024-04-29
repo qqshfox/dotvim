@@ -58,3 +58,6 @@ vim.api.nvim_set_keymap('n', '<M-[>', '<cmd>exe "vertical resize " . (winwidth(0
 vim.api.nvim_set_keymap('n', '<M-]>', '<cmd>exe "vertical resize " . (winwidth(0) * 3 / 2)<CR>', opts)
 vim.api.nvim_set_keymap('n', '<M-{>', '<cmd>exe "resize " . (winheight(0) * 2 / 3)<CR>', opts)
 vim.api.nvim_set_keymap('n', '<M-}>', '<cmd>exe "resize " . (winheight(0) * 3 / 2)<CR>', opts)
+
+-- disable macro recording
+vim.api.nvim_set_keymap('n', 'q', '<NOP>', opts)
