@@ -11,11 +11,6 @@ vim.api.nvim_set_keymap('n', ';;', ':!', { noremap = true })
 vim.api.nvim_set_keymap('n', '<UP>', 'g<UP>', opts)
 vim.api.nvim_set_keymap('n', '<DOWN>', 'g<DOWN>', opts)
 
-vim.api.nvim_set_keymap('n', '<C-h>', '<cmd>wincmd h<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-j>', '<cmd>wincmd j<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>wincmd k<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-l>', '<cmd>wincmd l<CR>', opts)
-
 vim.api.nvim_set_keymap('i', '<C-a>', '<C-O>^', opts)
 vim.api.nvim_set_keymap('i', '<C-e>', '<END>', opts)
 vim.api.nvim_set_keymap('i', '<C-b>', '<LEFT>', opts)
