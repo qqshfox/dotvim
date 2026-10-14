@@ -12,7 +12,7 @@ return {
     local cmp = require('cmp')
     cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
-    require('nvim-treesitter.configs').setup({
+    require('nvim-treesitter').setup({
       autopairs = { enable = true },
     })
   end

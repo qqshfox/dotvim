@@ -5,7 +5,7 @@ return {
   },
   event = 'VimEnter',
   config = function()
-    require'nvim-treesitter.configs'.setup {
+    require'nvim-treesitter'.setup {
       matchup = { enable = true },
     }
   end,
